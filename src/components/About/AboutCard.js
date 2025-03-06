@@ -8,30 +8,25 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            I am <span className="purple">Bett Remmy </span>
-            from <span className="purple"> Nairobi, Kenya</span>
+            Hey there! I'm <span className="purple">Bett Remmy</span>, a 
+            full-stack developer from <span className="purple">Nairobi, Kenya</span>. 
+            I love crafting digital experiences that are both **beautiful and functional**. 
+            Whether it's designing intuitive interfaces or building robust backend systems, 
+            I turn ideas into reality with **clean, scalable code**.
             <br />
-            I am full-stack  software developer.
             <br />
-            I'm passionate about building websites and applications that harmonize beauty and functionality.
+            My core stack includes <span className="purple">Bootstrap, Javascript, React </span>for frontend, and <span className="purple">Python, Flask, MySql, Postgres </span> for backend, but I’m always 
+            exploring new technologies to push boundaries. I'm particularly drawn to
+             <span className="purple">  web development, product design, </span> and <span className="purple"> blockchain innovations </span>.
             <br />
             <br />
-            Apart from coding, some other activities that I love to do!
+            When I’m not coding, you'll probably find me diving into new tech trends, 
+            connecting with Nairobi’s creative community, or working on passion projects 
+            that keep me inspired.
           </p>
-          <ul>
-            <li className="about-activity">
-              <ImPointRight /> Playing Games
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Writing Tech Blogs
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> I enjoy exploring Nairobi’s creative community
-            </li>
-          </ul>
 
           <p style={{ color: "rgb(155 126 172)" }}>
-           "Let your hands craft what hearts will remember."{" "}
+            "Let your hands craft what hearts will remember."{" "}
           </p>
           <footer className="blockquote-footer">Remmy</footer>
         </blockquote>
