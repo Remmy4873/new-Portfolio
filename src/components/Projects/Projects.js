@@ -25,10 +25,9 @@ function Projects() {
             <ProjectCard
               imgPath={chatify}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title= "frontend-react Ecommerce"
+              description= "A modern and responsive eCommerce frontend built with React.js. Features include product listings, shopping cart functionality, and a seamless user experience. Optimized for performance and usability."
+              ghLink="https://github.com/Remmy4873/ecommerce-frontend"
             />
           </Col>
 
@@ -36,10 +35,9 @@ function Projects() {
             <ProjectCard
               imgPath={bitsOfCode}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="Backend-Task Manager"
+              description="A group backend project for a Task Manager application built with Flask, Provides RESTful APIs for managing tasks and user authentication. Features JWT-based authentication and efficient task handling."
+              ghLink="https://github.com/nmogoko/ProjectFour-GroupFour.git"
             />
           </Col>
 
@@ -47,44 +45,39 @@ function Projects() {
             <ProjectCard
               imgPath={editor}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="Blog-react"
+              description="A React-based blogging platform that enables users to write, edit, and publish articles seamlessly. Supports markdown formatting, instant previews, and a user-friendly interface for an enhanced writing experience."
+              ghLink="https://github.com/Remmy4873/dojo-blog.git"          
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={bitsOfCode}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="Backend-Night Show"
+              description="A Flask-based REST API for managing a talk show’s episodes, guests, and appearances. It allows retrieving episode details, managing guest appearances, and handling database operations with SQLAlchemy. Features include CRUD operations, error handling, and seamless data integration."
+              ghLink="https://github.com/Remmy4873/Late-show-codechall.git"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={suicide}
+              imgPath={bitsOfCode}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
+              title="RecipeHub"
+              description= "A full-stack recipe management application built with React and Flask. Users can create, view, and manage recipes with markdown support, authentication, and seamless user experience."
+              ghLink="https://github.com/Remmy4873/python-p4-iam-putting-it-all-together-lab.git"
+              />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={emotion}
+              imgPath={bitsOfCode}
               isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+              title="Database-Many-to-Many"
+              description="A Flask-based application for managing employees, projects, meetings, and assignments. It features a relational database with many-to-many relationships, allowing seamless tracking of employee participation in projects and meetings."
+              ghLink="https://github.com/Remmy4873/python-p4-v2-many-many-relationships.git"
             />
           </Col>
         </Row>
