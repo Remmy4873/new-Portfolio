@@ -8,7 +8,7 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hey there! I'm <span className="purple">Bett Remmy</span>, a 
+            I'm <span className="purple">Bett Remmy</span>, a 
             full-stack developer from <span className="purple">Nairobi, Kenya</span>. 
             I love crafting digital experiences that are both **beautiful and functional**. 
             Whether it's designing intuitive interfaces or building robust backend systems, 
