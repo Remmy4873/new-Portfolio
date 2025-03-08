@@ -75,9 +75,9 @@ function Projects() {
             <ProjectCard
               imgPath={bitsOfCode}
               isBlog={false}
-              title="Database-Many-to-Many"
-              description="A Flask-based application for managing employees, projects, meetings, and assignments. It features a relational database with many-to-many relationships, allowing seamless tracking of employee participation in projects and meetings."
-              ghLink="https://github.com/Remmy4873/python-p4-v2-many-many-relationships.git"
+              title="Image-resizer"
+              description=" A React-based application for compressing images while maintaining quality. Users can upload an image, compress it, and download the optimized version with ease."
+              ghLink="https://github.com/Remmy4873/image-resizer.git"
             />
           </Col>
         </Row>
