@@ -19,7 +19,7 @@ function Home2() {
               BEHIND THE <span className="purple"> CODE </span>
             </h1>
             <p className="home-about-body">
-              Hey there! Welcome to my little corner of the internet.   
+              Welcome to my little corner of the internet.   
               Here’s where I tinker with code, build cool stuff, and—let’s be honest—break things (only to fix them again).  
               <br />
               <br />
