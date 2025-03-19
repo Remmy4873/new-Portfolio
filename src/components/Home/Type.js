@@ -7,7 +7,6 @@ function Type() {
     options={{
       strings: [
         "Welcome to my little corner of the web...",
-        "Where ideas turn into code & dreams take shape.",
         "Stay a while, explore, and connect with me.",
       ],
       autoStart: true,
