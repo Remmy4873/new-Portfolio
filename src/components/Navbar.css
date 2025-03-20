@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+    .navbar-nav {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+  }
+  
