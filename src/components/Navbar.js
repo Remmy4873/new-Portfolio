@@ -29,8 +29,8 @@ function NavBar() {
     <Navbar fixed="top" expand="md" className={navColour ? "sticky navbar" : "navbar"}>
       <Container>
         {/* Navigation Links */}
-        <Nav className="navbar-nav-custom ms-auto" role="navigation">
-          <Nav.Item className="nav-item-custom">
+        <Nav className="navbar-nav-custom" role="navigation">
+          <Nav.Item className="nav-item-custom first-item">
             <Nav.Link as={Link} to="/">
               <AiOutlineHome className="nav-icon" /> Home
             </Nav.Link>
@@ -48,7 +48,7 @@ function NavBar() {
             </Nav.Link>
           </Nav.Item>
 
-          <Nav.Item className="nav-item-custom">
+          <Nav.Item className="nav-item-custom last-item">
             <Nav.Link href="https://blogg-articles.vercel.app/" target="_blank" rel="noreferrer">
               <ImBlog className="nav-icon" /> Blog
             </Nav.Link>

@@ -1,7 +1,7 @@
 /* Navbar General Styling */
 .navbar {
     background: #003049;
-    padding: 12px 30px;
+    padding: 10px 20px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -13,7 +13,7 @@
 
 /* Sticky Navbar on Scroll */
 .sticky {
-    background: rgba(0, 48, 73, 0.9);
+    background: rgba(0, 48, 73, 0.95);
 }
 
 /* Custom Navbar Nav */
@@ -21,35 +21,53 @@
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
-    justify-content: center; /* Keep items centered */
+    justify-content: flex-start; /* Align items to the left */
     align-items: center;
-    gap: 20px; /* Space between links */
+    gap: 15px; /* Reduced gap */
+    width: 100%;
 }
 
 /* Navigation Links */
 .nav-item-custom a {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: white !important;
     transition: 0.3s ease-in-out;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 8px 12px;
+    white-space: nowrap;
 }
 
-.nav-item-custom a:hover {
-    color: #e6ba71 !important;
-    transform: scale(1.05);
+/* Reduce margin-left for "Home" */
+.first-item {
+    margin-left: 5px; /* Adjust as needed */
 }
 
-/* Keep items in a row even on smaller screens */
+/* Add right margin after "Blog" */
+.last-item {
+    margin-right: 15px; /* Adjust as needed */
+}
+
+/* Adjust margins on small screens */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 8px 10px; /* Further reduced padding */
+    }
+
     .navbar-nav-custom {
-        flex-direction: row !important; /* Ensures items stay in a row */
-        justify-content: center;
-        gap: 10px;
+        gap: 8px;
+        justify-content: flex-start; /* Keep items aligned to the left */
+    }
+
+    .first-item {
+        margin-left: 2px; /* Even less margin on smaller screens */
+    }
+
+    .last-item {
+        margin-right: 10px; /* Less margin to keep spacing balanced */
     }
 
     .nav-item-custom a {
-        font-size: 0.9rem;
-        padding: 8px 10px;
+        font-size: 0.85rem;
+        padding: 6px 8px;
     }
 }
