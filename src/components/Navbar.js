@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
@@ -19,18 +19,17 @@ function NavBar() {
     }
   }
 
-  window.addEventListener("scroll", scrollHandler);
+  // Attach scroll event listener safely with useEffect
+  useEffect(() => {
+    window.addEventListener("scroll", scrollHandler);
+    return () => window.removeEventListener("scroll", scrollHandler);
+  }, []);
 
   return (
     <Navbar fixed="top" expand="md" className={navColour ? "sticky navbar" : "navbar"}>
       <Container>
-        {/* Brand / Logo Section */}
-        <Navbar.Brand href="/" className="d-flex">
-          <span className="brand-name">B.Remmy</span>
-        </Navbar.Brand>
-
         {/* Navigation Links */}
-        <Nav className="navbar-nav-custom ms-auto">
+        <Nav className="navbar-nav-custom ms-auto" role="navigation">
           <Nav.Item className="nav-item-custom">
             <Nav.Link as={Link} to="/">
               <AiOutlineHome className="nav-icon" /> Home
