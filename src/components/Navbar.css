@@ -1,7 +1,7 @@
 /* Navbar General Styling */
 .navbar {
     background: #003049;
-    padding: 12px 30px; /* Increase padding to create space */
+    padding: 12px 30px; /* Increased padding */
     width: 100%;
     position: fixed;
     top: 0;
@@ -13,17 +13,12 @@
   /* Custom Navbar Nav */
   .navbar-nav-custom {
     display: flex !important;
-    flex-direction: row !important; /* Always stay in a row */
-    flex-wrap: nowrap !important; /* Prevent wrapping */
-    justify-content: center; /* Center the items */
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start; /* Align left */
     align-items: center;
-    gap: 30px; /* Increase spacing between items */
-    padding: 0 20px; /* Add padding to prevent edges */
-  }
-  
-  /* Ensure Nav Items Stay in One Line */
-  .nav-item-custom {
-    white-space: nowrap; /* Prevent text from breaking */
+    gap: 30px; /* Space between links */
+    padding-left: 20px; /* Push links a bit from the left */
   }
   
   /* Navigation Links */
@@ -32,7 +27,7 @@
     color: white !important;
     transition: 0.3s ease-in-out;
     text-decoration: none;
-    padding: 10px 15px; /* Add padding for clickable space */
+    padding: 10px 15px;
   }
   
   .nav-item-custom a:hover {
@@ -43,13 +38,13 @@
   /* Adjust spacing for smaller screens */
   @media (max-width: 768px) {
     .navbar-nav-custom {
-      gap: 15px; /* Reduce gap slightly */
-      padding: 0 10px; /* Adjust padding */
+      gap: 15px;
+      padding-left: 10px;
     }
   
     .nav-item-custom a {
-      font-size: 0.85rem; /* Slightly smaller text */
-      padding: 8px 12px; /* Adjust padding */
+      font-size: 0.85rem;
+      padding: 8px 12px;
     }
   }
   
