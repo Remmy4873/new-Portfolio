@@ -53,7 +53,7 @@
 /* Adjust for small screens */
 @media (max-width: 768px) {
     .navbar {
-        width: 80%; /* Adjust width for smaller screens */
+        width: 90%; /* Adjust width for smaller screens */
         top: 5px;
         padding: 10px; /* Reduce padding */
     }
