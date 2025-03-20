@@ -2,19 +2,15 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css"; // Import CSS for styling
 
-const NavBar = () => {
+const Navbar = () => {
   const [navColour, setNavColour] = useState(false);
 
   // Function to update navbar background on scroll
-  const handleScroll = () => {
-    if (window.scrollY >= 20) {
-      setNavColour(true);
-    } else {
-      setNavColour(false);
-    }
-  };
-
   useEffect(() => {
+    const handleScroll = () => {
+      setNavColour(window.scrollY >= 20);
+    };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -34,9 +30,9 @@ const NavBar = () => {
             <Link to="/project">Projects</Link>
           </li>
           <li className="nav-item last-item">
-            <Link to="https://blogg-articles.vercel.app/" target="_blank" rel="noreferrer">
+            <a href="https://blogg-articles.vercel.app/" target="_blank" rel="noreferrer">
               Blog
-            </Link>
+            </a>
           </li>
         </ul>
       </div>
@@ -44,4 +40,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;
