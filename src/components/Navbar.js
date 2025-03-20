@@ -3,18 +3,14 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
-import {
-  AiOutlineHome,
-  AiOutlineFundProjectionScreen,
-  AiOutlineUser,
-} from "react-icons/ai";
+import { AiOutlineHome, AiOutlineFundProjectionScreen, AiOutlineUser } from "react-icons/ai";
 import { ImBlog } from "react-icons/im";
-import "./Navbar.css"; 
-
+import "./Navbar.css"; // Import the CSS file for styling
 
 function NavBar() {
   const [navColour, updateNavbar] = useState(false);
 
+  // Function to update navbar background on scroll
   function scrollHandler() {
     if (window.scrollY >= 20) {
       updateNavbar(true);
@@ -26,34 +22,36 @@ function NavBar() {
   window.addEventListener("scroll", scrollHandler);
 
   return (
-    <Navbar fixed="top" expand="md" className={navColour ? "sticky" : "navbar"}>
+    <Navbar fixed="top" expand="md" className={navColour ? "sticky navbar" : "navbar"}>
       <Container>
+        {/* Brand / Logo Section */}
         <Navbar.Brand href="/" className="d-flex">
-          {/* <img src={logo} className="img-fluid logo" alt="brand" /> */}
+          <span className="brand-name">B.Remmy</span>
         </Navbar.Brand>
-        {/* Navigation Links (Always visible) */}
-        <Nav className="ms-auto d-flex flex-row flex-wrap justify-content-center">
-          <Nav.Item>
+
+        {/* Navigation Links */}
+        <Nav className="navbar-nav-custom ms-auto">
+          <Nav.Item className="nav-item-custom">
             <Nav.Link as={Link} to="/">
-              <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+              <AiOutlineHome className="nav-icon" /> Home
             </Nav.Link>
           </Nav.Item>
 
-          <Nav.Item>
+          <Nav.Item className="nav-item-custom">
             <Nav.Link as={Link} to="/about">
-              <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+              <AiOutlineUser className="nav-icon" /> About
             </Nav.Link>
           </Nav.Item>
 
-          <Nav.Item>
+          <Nav.Item className="nav-item-custom">
             <Nav.Link as={Link} to="/project">
-              <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }} /> Projects
+              <AiOutlineFundProjectionScreen className="nav-icon" /> Projects
             </Nav.Link>
           </Nav.Item>
 
-          <Nav.Item>
+          <Nav.Item className="nav-item-custom">
             <Nav.Link href="https://blogg-articles.vercel.app/" target="_blank" rel="noreferrer">
-              <ImBlog style={{ marginBottom: "2px" }} /> Blog
+              <ImBlog className="nav-icon" /> Blog
             </Nav.Link>
           </Nav.Item>
         </Nav>

@@ -1,10 +1,55 @@
-@media (max-width: 768px) {
-    .navbar-nav {
-      display: flex !important;
-      flex-direction: row !important;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
+/* Navbar General Styling */
+.navbar {
+    background: #003049;
+    padding: 12px 30px; /* Increase padding to create space */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Custom Navbar Nav */
+  .navbar-nav-custom {
+    display: flex !important;
+    flex-direction: row !important; /* Always stay in a row */
+    flex-wrap: nowrap !important; /* Prevent wrapping */
+    justify-content: center; /* Center the items */
+    align-items: center;
+    gap: 30px; /* Increase spacing between items */
+    padding: 0 20px; /* Add padding to prevent edges */
+  }
+  
+  /* Ensure Nav Items Stay in One Line */
+  .nav-item-custom {
+    white-space: nowrap; /* Prevent text from breaking */
+  }
+  
+  /* Navigation Links */
+  .nav-item-custom a {
+    font-size: 1rem;
+    color: white !important;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    padding: 10px 15px; /* Add padding for clickable space */
+  }
+  
+  .nav-item-custom a:hover {
+    color: #e6ba71 !important;
+    transform: scale(1.05);
+  }
+  
+  /* Adjust spacing for smaller screens */
+  @media (max-width: 768px) {
+    .navbar-nav-custom {
+      gap: 15px; /* Reduce gap slightly */
+      padding: 0 10px; /* Adjust padding */
+    }
+  
+    .nav-item-custom a {
+      font-size: 0.85rem; /* Slightly smaller text */
+      padding: 8px 12px; /* Adjust padding */
     }
   }
   
