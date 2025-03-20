@@ -1,13 +1,16 @@
 /* Navbar General Styling */
 .navbar {
     background: #003049;
-    padding: 10px 20px;
-    width: 100%;
+    padding: 12px 20px;
+    width: 50%; /* Reduce width */
+    max-width: 450px; /* Prevent it from getting too wide */
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 10px; /* Slightly move it down */
+    left: 50%;
+    transform: translateX(-50%); /* Center the navbar */
     z-index: 1000;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 80px; /* Rounded corners */
     transition: background 0.3s ease-in-out;
 }
 
@@ -16,58 +19,55 @@
     background: rgba(0, 48, 73, 0.95);
 }
 
-/* Custom Navbar Nav */
-.navbar-nav-custom {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    justify-content: flex-start; /* Align items to the left */
+/* Navbar Content */
+.navbar-container {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 15px; /* Reduced gap */
-    width: 100%;
 }
 
 /* Navigation Links */
-.nav-item-custom a {
-    font-size: 0.95rem;
-    color: white !important;
-    transition: 0.3s ease-in-out;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px; /* Space between items */
+    padding: 0;
+}
+
+/* Individual Nav Items */
+.nav-item a {
+    color: white;
+    font-size: 1rem;
     text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
     padding: 8px 12px;
     white-space: nowrap;
 }
 
-/* Reduce margin-left for "Home" */
-.first-item {
-    margin-left: 5px; /* Adjust as needed */
+.nav-item a:hover {
+    color: #E6BA71;
+    transform: scale(1.05);
 }
 
-/* Add right margin after "Blog" */
-.last-item {
-    margin-right: 15px; /* Adjust as needed */
-}
-
-/* Adjust margins on small screens */
+/* Adjust for small screens */
 @media (max-width: 768px) {
     .navbar {
-        padding: 8px 10px; /* Further reduced padding */
+        width: 80%; /* Adjust width for smaller screens */
+        top: 5px;
+        padding: 10px; /* Reduce padding */
     }
 
-    .navbar-nav-custom {
-        gap: 8px;
-        justify-content: flex-start; /* Keep items aligned to the left */
+    .nav-links {
+        display: flex;
+        flex-direction: row; /* Keep items in a row */
+        flex-wrap: wrap; /* Allow wrapping if needed */
+        justify-content: center; /* Center items for better appearance */
+        gap: 12px; /* Reduce spacing */
     }
 
-    .first-item {
-        margin-left: 2px; /* Even less margin on smaller screens */
-    }
-
-    .last-item {
-        margin-right: 10px; /* Less margin to keep spacing balanced */
-    }
-
-    .nav-item-custom a {
-        font-size: 0.85rem;
-        padding: 6px 8px;
+    .nav-item a {
+        font-size: 0.85rem; /* Slightly reduce text size */
+        padding: 6px 10px;
     }
 }

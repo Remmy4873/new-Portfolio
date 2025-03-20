@@ -1,62 +1,47 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
-import { AiOutlineHome, AiOutlineFundProjectionScreen, AiOutlineUser } from "react-icons/ai";
-import { ImBlog } from "react-icons/im";
-import "./Navbar.css"; // Import the CSS file for styling
+import "./Navbar.css"; // Import CSS for styling
 
-function NavBar() {
-  const [navColour, updateNavbar] = useState(false);
+const NavBar = () => {
+  const [navColour, setNavColour] = useState(false);
 
   // Function to update navbar background on scroll
-  function scrollHandler() {
+  const handleScroll = () => {
     if (window.scrollY >= 20) {
-      updateNavbar(true);
+      setNavColour(true);
     } else {
-      updateNavbar(false);
+      setNavColour(false);
     }
-  }
+  };
 
-  // Attach scroll event listener safely with useEffect
   useEffect(() => {
-    window.addEventListener("scroll", scrollHandler);
-    return () => window.removeEventListener("scroll", scrollHandler);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <Navbar fixed="top" expand="md" className={navColour ? "sticky navbar" : "navbar"}>
-      <Container>
+    <nav className={navColour ? "navbar sticky" : "navbar"}>
+      <div className="navbar-container">
         {/* Navigation Links */}
-        <Nav className="navbar-nav-custom" role="navigation">
-          <Nav.Item className="nav-item-custom first-item">
-            <Nav.Link as={Link} to="/">
-              <AiOutlineHome className="nav-icon" /> Home
-            </Nav.Link>
-          </Nav.Item>
-
-          <Nav.Item className="nav-item-custom">
-            <Nav.Link as={Link} to="/about">
-              <AiOutlineUser className="nav-icon" /> About
-            </Nav.Link>
-          </Nav.Item>
-
-          <Nav.Item className="nav-item-custom">
-            <Nav.Link as={Link} to="/project">
-              <AiOutlineFundProjectionScreen className="nav-icon" /> Projects
-            </Nav.Link>
-          </Nav.Item>
-
-          <Nav.Item className="nav-item-custom last-item">
-            <Nav.Link href="https://blogg-articles.vercel.app/" target="_blank" rel="noreferrer">
-              <ImBlog className="nav-icon" /> Blog
-            </Nav.Link>
-          </Nav.Item>
-        </Nav>
-      </Container>
-    </Navbar>
+        <ul className="nav-links">
+          <li className="nav-item first-item">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/about">About</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/project">Projects</Link>
+          </li>
+          <li className="nav-item last-item">
+            <Link to="https://blogg-articles.vercel.app/" target="_blank" rel="noreferrer">
+              Blog
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
-}
+};
 
 export default NavBar;
